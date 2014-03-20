@@ -1,5 +1,7 @@
 class Cms::Snippet < ActiveRecord::Base
   include Cms::Base
+  #sets up model as a tenant in milia
+  acts_as_tenant
   
   cms_is_categorized
   cms_is_mirrored

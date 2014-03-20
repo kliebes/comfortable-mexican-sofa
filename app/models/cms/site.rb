@@ -1,5 +1,7 @@
 class Cms::Site < ActiveRecord::Base
   include Cms::Base
+  #sets up model as a tenant in milia
+  acts_as_tenant
   
   # -- Relationships --------------------------------------------------------
   with_options :dependent => :destroy do |site|
